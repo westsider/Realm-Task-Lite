@@ -12,7 +12,26 @@
 		0DC6771C1E4E63D400F9A137 /* RealmTaskLite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DC6771A1E4E63D400F9A137 /* RealmTaskLite.xcdatamodeld */; };
 		0DC6771E1E4E63D400F9A137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC6771D1E4E63D400F9A137 /* Assets.xcassets */; };
 		0DC677211E4E63D400F9A137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC6771F1E4E63D400F9A137 /* LaunchScreen.storyboard */; };
+		0DC6772B1E4E65D800F9A137 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC677291E4E65D800F9A137 /* Realm.framework */; };
+		0DC6772C1E4E65D800F9A137 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC677291E4E65D800F9A137 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0DC6772D1E4E65D800F9A137 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC6772A1E4E65D800F9A137 /* RealmSwift.framework */; };
+		0DC6772E1E4E65D800F9A137 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC6772A1E4E65D800F9A137 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0DC6772F1E4E65D800F9A137 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0DC6772E1E4E65D800F9A137 /* RealmSwift.framework in Embed Frameworks */,
+				0DC6772C1E4E65D800F9A137 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0DC677101E4E63D400F9A137 /* RealmTaskLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmTaskLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,6 +42,8 @@
 		0DC677201E4E63D400F9A137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DC677221E4E63D400F9A137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DC677281E4E643A00F9A137 /* RealmTaskLite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealmTaskLite.entitlements; sourceTree = "<group>"; };
+		0DC677291E4E65D800F9A137 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		0DC6772A1E4E65D800F9A137 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DC6772D1E4E65D800F9A137 /* RealmSwift.framework in Frameworks */,
+				0DC6772B1E4E65D800F9A137 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +62,8 @@
 		0DC677071E4E63D400F9A137 = {
 			isa = PBXGroup;
 			children = (
+				0DC677291E4E65D800F9A137 /* Realm.framework */,
+				0DC6772A1E4E65D800F9A137 /* RealmSwift.framework */,
 				0DC677121E4E63D400F9A137 /* RealmTaskLite */,
 				0DC677111E4E63D400F9A137 /* Products */,
 			);
@@ -76,6 +101,7 @@
 				0DC6770C1E4E63D400F9A137 /* Sources */,
 				0DC6770D1E4E63D400F9A137 /* Frameworks */,
 				0DC6770E1E4E63D400F9A137 /* Resources */,
+				0DC6772F1E4E65D800F9A137 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,6 +286,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RealmTaskLite/RealmTaskLite.entitlements;
 				DEVELOPMENT_TEAM = 22U4CL887R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RealmTaskLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TradeStrat.RealmTaskLite;
@@ -274,6 +304,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RealmTaskLite/RealmTaskLite.entitlements;
 				DEVELOPMENT_TEAM = 22U4CL887R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RealmTaskLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TradeStrat.RealmTaskLite;
