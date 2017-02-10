@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0DC677141E4E63D400F9A137 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC677131E4E63D400F9A137 /* AppDelegate.swift */; };
 		0DC677161E4E63D400F9A137 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC677151E4E63D400F9A137 /* ViewController.swift */; };
-		0DC677191E4E63D400F9A137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC677171E4E63D400F9A137 /* Main.storyboard */; };
 		0DC6771C1E4E63D400F9A137 /* RealmTaskLite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DC6771A1E4E63D400F9A137 /* RealmTaskLite.xcdatamodeld */; };
 		0DC6771E1E4E63D400F9A137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC6771D1E4E63D400F9A137 /* Assets.xcassets */; };
 		0DC677211E4E63D400F9A137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC6771F1E4E63D400F9A137 /* LaunchScreen.storyboard */; };
@@ -19,11 +18,11 @@
 		0DC677101E4E63D400F9A137 /* RealmTaskLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmTaskLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC677131E4E63D400F9A137 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DC677151E4E63D400F9A137 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0DC677181E4E63D400F9A137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DC6771B1E4E63D400F9A137 /* RealmTaskLite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RealmTaskLite.xcdatamodel; sourceTree = "<group>"; };
 		0DC6771D1E4E63D400F9A137 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DC677201E4E63D400F9A137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DC677221E4E63D400F9A137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DC677281E4E643A00F9A137 /* RealmTaskLite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealmTaskLite.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +55,9 @@
 		0DC677121E4E63D400F9A137 /* RealmTaskLite */ = {
 			isa = PBXGroup;
 			children = (
+				0DC677281E4E643A00F9A137 /* RealmTaskLite.entitlements */,
 				0DC677131E4E63D400F9A137 /* AppDelegate.swift */,
 				0DC677151E4E63D400F9A137 /* ViewController.swift */,
-				0DC677171E4E63D400F9A137 /* Main.storyboard */,
 				0DC6771D1E4E63D400F9A137 /* Assets.xcassets */,
 				0DC6771F1E4E63D400F9A137 /* LaunchScreen.storyboard */,
 				0DC677221E4E63D400F9A137 /* Info.plist */,
@@ -101,6 +100,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 22U4CL887R;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -129,7 +133,6 @@
 			files = (
 				0DC677211E4E63D400F9A137 /* LaunchScreen.storyboard in Resources */,
 				0DC6771E1E4E63D400F9A137 /* Assets.xcassets in Resources */,
-				0DC677191E4E63D400F9A137 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,14 +152,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0DC677171E4E63D400F9A137 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0DC677181E4E63D400F9A137 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0DC6771F1E4E63D400F9A137 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -263,6 +258,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RealmTaskLite/RealmTaskLite.entitlements;
 				DEVELOPMENT_TEAM = 22U4CL887R;
 				INFOPLIST_FILE = RealmTaskLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -276,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RealmTaskLite/RealmTaskLite.entitlements;
 				DEVELOPMENT_TEAM = 22U4CL887R;
 				INFOPLIST_FILE = RealmTaskLite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
